@@ -1,5 +1,6 @@
 import express from "express";
 import userRoutes from "./routes/user.route";
+import bookingRoutes from "./routes/booking.route";
 
 const app = express();
 
@@ -10,5 +11,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users", userRoutes);
+app.use("/bookings", bookingRoutes);
 
 export default app;
